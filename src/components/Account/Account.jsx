@@ -1,8 +1,7 @@
-import React from "react";
 import PropTypes from "prop-types";
-import "./AccountCard.css";
+import "./Account.css";
 
-function IconTextCard({ accTitle, accAmount, accAmountDescription }) {
+function Account({ accTitle, accAmount, accAmountDescription }) {
   return (
     <section className="account">
       <div className="account-content-wrapper">
@@ -15,9 +14,10 @@ function IconTextCard({ accTitle, accAmount, accAmountDescription }) {
   );
 }
 
-AccountSection.propTypes = {
+Account.propTypes = {
   accTitle: PropTypes.string.isRequired,
   accAmount: PropTypes.string.isRequired,
   accAmountDescription: PropTypes.string.isRequired,
 };
-export default IconTextCard;
+
+export default Account;
