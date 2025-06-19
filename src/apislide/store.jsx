@@ -1,23 +1,18 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "../Rebux/userSlice";
-import { apiService } from "../apislide/apiService";
-
-// Configuration du store Redux avec Redux Toolkit.
-// configureStore est une fonction qui simplifie la création du store et intègre déjà certains outils comme Redux DevTools.
+import authReducer from "../Rebux/userSlice"; // Reducer personnalisé pour l’auth
+import { apiService } from "../apislide/apiService"; // RTK Query service
 
 export const store = configureStore({
-  // Définition des différents réducteurs (reducers) qui géreront les parties de l'état global de l'application
   reducer: {
-    // Le réducteur authReducer gère l'état d'authentification de l'utilisateur (login, token, user).
+    // Slice de gestion de l’authentification
     auth: authReducer,
 
-    // Le réducteur de apiService, géré par RTK Query, permet de centraliser les requêtes API
-    // et d'avoir un cache automatique des données récupérées.
+    // Reducer RTK Query (clé dynamique)
     [apiService.reducerPath]: apiService.reducer,
   },
 
-  // Ajout d'un middleware personnalisé, ici on concatène le middleware par défaut avec celui fourni par RTK Query.
-  // middleware RTK Query est également ajouté pour gérer les actions liées aux requêtes API (envoi de requêtes, réception de données, gestion des erreurs, etc.......).
+  // Ajout du middleware RTK Query pour gérer les requêtes et le cache
+  //Il permet à RTK Query de gérer les appels réseau, le cache, le polling, les erreurs, etc sans ce middleware, RTK Query ne fonctionnerait pas.
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat(apiService.middleware),
 });
