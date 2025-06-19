@@ -1,5 +1,4 @@
 import ModalLogin from "../components/Sign-In/ModalLogin";
-
 import "./connexion.css";
 
 function Connexion() {
