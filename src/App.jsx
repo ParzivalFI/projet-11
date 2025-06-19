@@ -1,12 +1,4 @@
 import React from "react";
-// import Header from "./components/Header/Header";
-// import AccountCard from "./components/AccountCard/AccountCard";
-// import Footer from "./components/Footer/Footer";
-// import Login from "./components/Sign_In/Login";
-// import Home from "./components/Pages/Home";
-// import SignIn from "./components/Sign-In/SignIn";
-// import Login from "./components/Pages/Connexion";
-// import "./style/main.css";
 import {
   BrowserRouter as Router,
   Routes,
@@ -80,21 +72,3 @@ function App() {
 }
 
 export default App;
-
-// import React from "react";
-// // import Header from "./components/Header/Header";
-// // import AccountCard from "./components/AccountCard/AccountCard";
-// // import Footer from "./components/Footer/Footer";
-// // import Login from "./components/Sign-In/Login";
-// import SignIn from "./components/Sign-In/SignIn";
-// import { Routes, Route } from "react-router";
-
-// const App = () => {
-//   return (
-//     <Routes>
-//       <Route path="sign-in" element={<SignIn />} />
-//     </Routes>
-//   );
-// };
-
-// export default App;
