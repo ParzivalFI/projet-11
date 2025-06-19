@@ -16,9 +16,9 @@ import {
 import { Provider, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { store } from "./apislide/store";
-import Connexion from "./components/Pages/Connexion";
-import Home from "./components/Pages/Home";
-import Profil from "./components/Pages/Profil";
+import Connexion from "./Pages/Connexion";
+import Home from "./Pages/Home";
+import Profil from "./Pages/Profil";
 import ProtegeRoute from "./components/protegeRoute/ProtegeRoute";
 import { setCredentials } from "./Rebux/action";
 import { apiService } from "./apislide/apiService";
@@ -55,7 +55,7 @@ function AppContent() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Navigate to="/index" />} />
+        <Route path="*" element={<Navigate to="/index" replace />} />
         <Route path="/index" element={<Home />} />
         <Route path="/login" element={<Connexion />} />
         <Route

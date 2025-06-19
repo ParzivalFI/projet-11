@@ -1,6 +1,6 @@
-import NavBar from "../Navbar/Navbar";
-import UserCompte from "../UserCompte/UserCompte";
-import Footer from "../Footer/Footer";
+import NavBar from "../components/Navbar/Navbar";
+import UserCompte from "../components/UserCompte/UserCompte";
+import Footer from "../components/Footer/Footer";
 
 function Profil() {
   return (

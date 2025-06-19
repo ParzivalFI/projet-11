@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 import Account from "../Account/Account";
 import userDataBank from "../Account/listAccount.json";
 import "./UserCompte.css";
-import Edituser from "../Pages/Edituser";
+import Edituser from "../Edituser/Edituser";
 
 function UserAccount() {
   // Récupérer les informations utilisateur depuis Redux

@@ -1,6 +1,6 @@
-import Footer from "../Footer/Footer";
-import ModalLogin from "../Sign-In/ModalLogin";
-import NavBar from "../Navbar/Navbar";
+import Footer from "../components/Footer/Footer";
+import ModalLogin from "../components/Sign-In/ModalLogin";
+import NavBar from "../components/Navbar/Navbar";
 import "./connexion.css";
 
 function Connexion() {
