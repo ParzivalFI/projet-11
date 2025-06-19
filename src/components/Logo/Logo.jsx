@@ -1,4 +1,4 @@
-import logoImg from "../../assets/argentBankLogo.png";
+import logoImg from "../../assets/argentBankLogo.webp";
 import "./Logo.css";
 
 function Logo() {

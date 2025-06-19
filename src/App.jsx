@@ -14,6 +14,8 @@ import Profil from "./Pages/Profil";
 import ProtegeRoute from "./components/protegeRoute/ProtegeRoute";
 import { setCredentials } from "./Rebux/action";
 import { apiService } from "./apislide/apiService";
+import NavBar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 
 function AppContent() {
   // un hook de Redux qui permet d’envoyer des actions au store Redux. Tu vas t’en servir pour :
@@ -46,6 +48,7 @@ function AppContent() {
 
   return (
     <Router>
+      <NavBar />
       <Routes>
         <Route path="*" element={<Navigate to="/index" replace />} />
         <Route path="/index" element={<Home />} />
@@ -59,6 +62,7 @@ function AppContent() {
           }
         />
       </Routes>
+      <Footer />
     </Router>
   );
 }

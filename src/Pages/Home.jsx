@@ -7,16 +7,12 @@ import AccountCard from "../components/AccountCard/AccountCard";
 function Home() {
   return (
     <>
-      <header>
-        <Navbar />
-      </header>
       <main>
         <section className="features">
           <h2 className="sr-only">Features</h2>
           <AccountCard />
         </section>
       </main>
-      <Footer />
     </>
   );
 }
